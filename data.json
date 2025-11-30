@@ -15,8 +15,15 @@
       "name": "健美先生激炸滷味",
       "tag": "炸滷味",
       "spicy": "🔥🔥🔥",
-      "desc": "【營業中】位於太平路。先滷後炸的傳奇滷味，推薦「激炸鴨翅」與「爆筋鳳爪」，刷上特製辣醬超讚。",
-      "map": "https://www.google.com/maps/search/?api=1&query=21臭豆腐8"
+      "desc": "【營業中】位於三民路三段（近太平路口）。先滷後炸的傳奇滷味，推薦「激炸鴨翅」與「爆筋鳳爪」，刷上特製辣醬超讚。",
+      "map": "https://www.google.com/maps/search/?api=1&query=健美先生激炸滷味"
+    },
+    {
+      "name": "海角G號 鹹水雞/麻辣雞",
+      "tag": "冷食",
+      "spicy": "🔥🔥🔥🔥",
+      "desc": "【營業中】位於尊賢街（水利大樓對面）。它的辣粉非常厲害，老闆會問你「要不要大辣」，敢吃辣的一定要挑戰。",
+      "map": "https://www.google.com/maps/search/?api=1&query=海角G號鹹水雞"
     },
     {
       "name": "山西刀削麵食館",
@@ -44,21 +51,21 @@
       "tag": "泰式",
       "spicy": "🔥🔥🔥",
       "desc": "【營業中】位於尊賢街。提供單人份的泰式冬蔭功麵、打拋豬飯，平價且酸辣夠味。",
-      "map": "https://www.google.com/maps/search/?api=1&query=21臭豆腐9"
+      "map": "https://www.google.com/maps/search/?api=1&query=泰奶奶的泰式料理"
     },
     {
       "name": "求求辣年糕",
       "tag": "韓式",
       "spicy": "🔥🔥🔥",
       "desc": "【營業中】位於三民路巷弄。雖然有賣鍋，但單點的「辣炒年糕」份量適合一人，辣醬道地。",
-      "map": "https://www.google.com/maps/search/?api=1&query=求求辣年糕+一中"
+      "map": "https://www.google.com/maps/search/?api=1&query=求求辣年糕"
     },
     {
       "name": "辛韓道 (台中一中店)",
       "tag": "韓式定食",
       "spicy": "🔥🔥🔥",
       "desc": "【營業中】位於三民路。新式韓式料理，有提供單人套餐（韓式拉麵、豆腐鍋），小菜無限續。",
-      "map": "https://www.google.com/maps/search/?api=1&query=品宏小不點麻辣燙0"
+      "map": "https://www.google.com/maps/search/?api=1&query=辛韓道+台中一中店"
     },
     {
       "name": "品宏小不點麻辣燙",
@@ -74,14 +81,21 @@
       "tag": "善化 | 拉麵",
       "spicy": "🔥🔥🔥🔥",
       "desc": "【營業中】位於善化民生路。座位有隔板，單人用餐極佳。推薦「地獄拉麵」，辣燥香氣足。",
-      "map": "https://www.google.com/maps/search/?api=1&query=双赫日式拉麵+善化"
+      "map": "https://www.google.com/maps/search/?api=1&query=双赫日式拉麵+善化店"
     },
     {
-      "name": "三顧茅廬 (善化中山店)",
-      "tag": "善化 | 湯滷味",
+      "name": "榮昌甘記麻辣燙 (善化店)",
+      "tag": "善化 | 麻辣燙",
+      "spicy": "🔥🔥🔥🔥",
+      "desc": "【營業中】位於善化中正路。善化在地的重慶口味麻辣燙，湯頭濃郁香麻，鴨血豆腐都很入味，非常適合一人晚餐。",
+      "map": "https://www.google.com/maps/search/?api=1&query=榮昌甘記麻辣燙+善化"
+    },
+    {
+      "name": "泰味食足",
+      "tag": "善化 | 泰式",
       "spicy": "🔥🔥🔥",
-      "desc": "【營業中】位於善化中山路。經典麻辣湯滷味，湯頭可喝，可自選肉片與火鍋料。",
-      "map": "https://www.google.com/maps/search/?api=1&query=三顧茅廬+善化中山店"
+      "desc": "【營業中】位於善化大同路。善化老字號泰式料理，酸辣海鮮湯或打拋豬非常下飯，適合想吃點酸辣開胃的人。",
+      "map": "https://www.google.com/maps/search/?api=1&query=泰味食足+善化"
     },
     {
       "name": "老先覺功夫窯燒鍋 (善化店)",
@@ -91,39 +105,39 @@
       "map": "https://www.google.com/maps/search/?api=1&query=老先覺+善化店"
     },
     {
-      "name": "五花馬水餃館 (善化店)",
-      "tag": "善化 | 麵食",
-      "spicy": "🔥🔥🔥",
-      "desc": "【營業中】位於善化建國路。推薦「麻辣麵」，辣度真實，內用有免費小米粥。",
-      "map": "https://www.google.com/maps/search/?api=1&query=五花馬水餃館+善化店"
-    },
-    {
-      "name": "潮味決 (善化中山分社)",
-      "tag": "善化 | 湯滷味",
-      "spicy": "🔥🔥🔥",
-      "desc": "【營業中】位於善化中山路。環境乾淨，推薦「麻辣湯頭」套餐，單人方便。",
-      "map": "https://www.google.com/maps/search/?api=1&query=潮味決+善化中山分社"
+      "name": "麻花重慶火鍋 (善化店)",
+      "tag": "善化 | 火鍋",
+      "spicy": "🔥🔥🔥🔥",
+      "desc": "【營業中】位於善化中山路。雖然是餐廳，但採無菜單套餐式（算人頭），想好好犒賞自己吃頓精緻麻辣鍋的好選擇。",
+      "map": "https://www.google.com/maps/search/?api=1&query=麻花重慶火鍋+善化"
     },
     {
       "name": "濃鄉臭豆腐",
       "tag": "台中後站 | 臭豆腐",
       "spicy": "🔥🔥🔥",
       "desc": "【營業中】位於大智路（車站步行5分）。台中必吃名店，外酥內嫩，內用免費熱湯飲料，辣醬很香。",
-      "map": "https://www.google.com/maps/search/?api=1&query=品宏小不點麻辣燙1"
+      "map": "https://www.google.com/maps/search/?api=1&query=濃鄉臭豆腐"
     },
     {
       "name": "大慶麵店 (復興店)",
       "tag": "台中後站 | 麵食",
       "spicy": "🔥🔥",
-      "desc": "【營業中】位於復興路四段。平價麵食首選，推薦招牌乾麵並自行添加店家的特製辣油，簡單卻非常香。",
-      "map": "https://www.google.com/maps/search/?api=1&query=大慶麵店+大智店"
+      "desc": "【營業中】位於復興路四段（後站步行可達）。平價麵食首選，推薦招牌乾麵並自行添加店家的特製辣油，簡單卻非常香。",
+      "map": "https://www.google.com/maps/search/?api=1&query=大慶麵店+台中復興店"
     },
     {
       "name": "老鑼麵館",
       "tag": "台中前站 | 麵食",
       "spicy": "🔥🔥",
       "desc": "【營業中】位於干城車站附近（步行可達）。超過50年的老店，牛肉麵湯頭濃郁，加辣油非常過癮。",
-      "map": "https://www.google.com/maps/search/?api=1&query=品宏小不點麻辣燙2"
+      "map": "https://www.google.com/maps/search/?api=1&query=老鑼麵館"
+    },
+    {
+      "name": "韓石食堂 (鐵鹿大街)",
+      "tag": "台中站 | 韓式",
+      "spicy": "🔥🔥🔥",
+      "desc": "【營業中】位於台中車站一樓美食街（鐵鹿大街）。韓式豆腐鍋與石鍋拌飯，方便快速且有辣味選擇。",
+      "map": "https://www.google.com/maps/search/?api=1&query=韓石食堂+台中車站"
     }
   ],
   "trains": [
