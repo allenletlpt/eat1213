@@ -1,0 +1,99 @@
+{
+  "schedule": {
+    "day1_title": "12/12 (五) 一中街：巷弄辣味挖掘",
+    "day2_title": "12/13 (六) 善化/台中：在地隱藏版"
+  },
+  "day1_food": [
+    {
+      "name": "那個鍋 (一中店)",
+      "tag": "個人麻辣鍋",
+      "spicy": "🔥🔥🔥🔥",
+      "desc": "非常適合一人獨享的麻辣鍋，湯頭重口味，重點是點鍋享有「那個麵」無限吃到飽，麵條拌上蒜末與辣油非常過癮。",
+      "map": "https://www.google.com/maps/search/?api=1&query=那個鍋+一中店"
+    },
+    {
+      "name": "蘇記健康滷味",
+      "tag": "老店滷味",
+      "spicy": "🔥🔥🔥",
+      "desc": "太平路巷子裡的傳奇老店。雖然叫健康滷味，但他們的特製沾醬蒜味與辣味極重，酸菜也是一絕，外帶回旅館配啤酒首選。",
+      "map": "https://www.google.com/maps/search/?api=1&query=蘇記健康滷味"
+    },
+    {
+      "name": "山西刀削麵食館",
+      "tag": "麵食",
+      "spicy": "🔥🔥",
+      "desc": "位於育才南街。雖然招牌是蕃茄牛肉麵，但請加桌上的辣牛油，濃郁的湯頭配上嚼勁十足的刀削麵，是很多臺體大學生的愛。",
+      "map": "https://www.google.com/maps/search/?api=1&query=一中街+山西刀削麵"
+    },
+    {
+      "name": "8兩碳烤雞排",
+      "tag": "炸物",
+      "spicy": "🔥🔥",
+      "desc": "先炸後烤，刷上鹹甜醬汁後，一定要請老闆灑上重辣粉。炭烤香氣與辣味結合，比傳統雞排更有層次。",
+      "map": "https://www.google.com/maps/search/?api=1&query=一中+8兩碳烤雞排"
+    },
+    {
+      "name": "韓金量 新韓式炸雞",
+      "tag": "韓式",
+      "spicy": "🔥🔥🔥",
+      "desc": "如果想吃韓式甜辣口味，這家的「地獄辣味」炸雞或炸年糕非常開胃，醬汁裹得很均勻。",
+      "map": "https://www.google.com/maps/search/?api=1&query=韓金量+一中"
+    },
+    {
+      "name": "泰婆婆泰式料理",
+      "tag": "泰式",
+      "spicy": "🔥🔥🔥",
+      "desc": "隱藏在巷弄的一人份泰式料理。酸辣海鮮湯麵或綠咖哩雞飯，酸辣度很夠，適合不想吃台式口味的時候。",
+      "map": "https://www.google.com/maps/search/?api=1&query=泰婆婆泰式料理"
+    }
+  ],
+  "day2_food": [
+    {
+      "name": "双赫日式拉麵 (善化店)",
+      "tag": "善化 | 拉麵",
+      "spicy": "🔥🔥🔥🔥",
+      "desc": "善化也能吃到像樣的日式拉麵。推薦點「地獄拉麵」或「辛 雞白湯」，辣肉燥香氣十足，湯頭濃郁。",
+      "map": "https://www.google.com/maps/search/?api=1&query=双赫日式拉麵+善化"
+    },
+    {
+      "name": "鑫苑麻辣燙",
+      "tag": "善化 | 麻辣燙",
+      "spicy": "🔥🔥🔥🔥",
+      "desc": "善化在地人推薦的麻辣燙，湯頭是可以喝的那種，中藥香氣重，食材新鮮，辣度可自選。",
+      "map": "https://www.google.com/maps/search/?api=1&query=鑫苑麻辣燙+善化"
+    },
+    {
+      "name": "老三國 善化店",
+      "tag": "善化 | 麻辣鍋",
+      "spicy": "🔥🔥🔥🔥",
+      "desc": "如果您真的很想吃麻辣鍋，這家依然是善化首選。鴨血豆腐入味，個人鍋份量剛好。",
+      "map": "https://www.google.com/maps/search/?api=1&query=老三國+善化"
+    },
+    {
+      "name": "泰味食足",
+      "tag": "善化 | 泰式",
+      "spicy": "🔥🔥🔥",
+      "desc": "善化老字號泰式。打拋豬、酸辣湯都是經典，適合喜歡酸辣開胃口感的人。",
+      "map": "https://www.google.com/maps/search/?api=1&query=泰味食足+善化"
+    },
+    {
+      "name": "小林牛肉麵 (台中站前)",
+      "tag": "台中站 | 麵食",
+      "spicy": "🔥🔥🔥",
+      "desc": "如果要在台中車站附近吃，這家老店的紅燒牛肉麵加上店家的酸菜與辣油，是非常傳統的重口味。",
+      "map": "https://www.google.com/maps/search/?api=1&query=小林牛肉麵+台中"
+    },
+    {
+      "name": "有春茶館 (大智店)",
+      "tag": "台中站 | 麵食",
+      "spicy": "🔥🔥🔥",
+      "desc": "環境舒適不趕人。推薦麻辣乾拌麵系列，花椒香氣明顯，適合優雅地吃完去搭車。",
+      "map": "https://www.google.com/maps/search/?api=1&query=有春茶館+大智店"
+    }
+  ],
+  "trains": [
+    { "code": "自強 123", "dept": "16:40", "arr": "17:51", "note": "⭐ 首選 (接善化晚餐)" },
+    { "code": "自強 125", "dept": "17:33", "arr": "18:41", "note": "次選" },
+    { "code": "自強 129", "dept": "17:55", "arr": "19:15", "note": "台中吃飽再走" }
+  ]
+}
