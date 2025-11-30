@@ -30,8 +30,12 @@
         .btn:hover { background: #e1e1e1; color: var(--primary); }
 
         table { width: 100%; border-collapse: collapse; background: white; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
-        th { background: #2d3436; color: white; padding: 12px; }
-        td { padding: 12px; border-bottom: 1px solid #eee; text-align: center; }
+        th { background: #2d3436; color: white; padding: 12px; font-size: 0.9em;}
+        td { padding: 12px; border-bottom: 1px solid #eee; text-align: center; font-size: 0.95em;}
+        tr:last-child td { border-bottom: none; }
+        
+        /* 特別標註推薦車次 */
+        .recommend-train { background-color: #fff3cd; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -39,7 +43,7 @@
 <div class="container">
     <header>
         <h1>🌶️ 台中善化．嗜辣美食攻略</h1>
-        <p>資料讀取自 GitHub 雲端設定檔</p>
+        <p>資料來源：GitHub 雲端設定檔 (v2.0)</p>
     </header>
 
     <div id="loading">正在連線讀取最新美食資料...</div>
@@ -51,53 +55,54 @@
         <h2 id="day2-title"></h2>
         <div id="day2-list" class="grid"></div>
 
-        <h2>🚄 台中 -> 善化 火車時刻 (必停靠)</h2>
+        <h2>🚄 台中 -> 善化 火車時刻 (12/13 下午)</h2>
+        <p style="font-size:0.9em; color:#666;">只列出「有停靠善化」的班次 (含慢車)</p>
         <table>
             <thead>
-                <tr><th>車次</th><th>台中開</th><th>善化到</th><th>備註</th></tr>
+                <tr><th>車次</th><th>台中開</th><th>善化到</th><th>時長</th><th>備註</th></tr>
             </thead>
             <tbody id="train-list"></tbody>
         </table>
+        <br><br>
+        <div style="text-align: center; color: #aaa; font-size: 0.8em;">Designed for Solo Spicy Food Lover</div>
     </div>
 </div>
 
 <script>
     $(document).ready(function() {
-        // 設定 GitHub Pages 讀取路徑 (相對路徑即可)
         var dataUrl = "data.json";
 
         $.ajax({
             url: dataUrl,
             dataType: 'json',
-            // 重要：設為 false 會強制瀏覽器不快取 (加上 timestamp)
             cache: false, 
             success: function(data) {
                 $('#loading').hide();
                 $('#content').fadeIn();
 
-                // 填入標題
                 $('#day1-title').text(data.schedule.day1_title);
                 $('#day2-title').text(data.schedule.day2_title);
 
-                // 填入列表
                 renderFood(data.day1_food, '#day1-list');
                 renderFood(data.day2_food, '#day2-list');
 
-                // 填入火車
                 var trainHtml = '';
                 $.each(data.trains, function(i, item) {
-                    trainHtml += '<tr>';
+                    // 簡單判斷是否為推薦車次 (備註含有星星)
+                    var rowClass = item.note.indexOf('⭐') !== -1 ? 'recommend-train' : '';
+                    
+                    trainHtml += '<tr class="' + rowClass + '">';
                     trainHtml += '<td>' + item.code + '</td>';
                     trainHtml += '<td>' + item.dept + '</td>';
                     trainHtml += '<td>' + item.arr + '</td>';
+                    trainHtml += '<td>' + item.time + '</td>';
                     trainHtml += '<td>' + item.note + '</td>';
                     trainHtml += '</tr>';
                 });
                 $('#train-list').html(trainHtml);
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                $('#loading').html('<span style="color:red">讀取失敗。<br>請確認 data.json 是否已上傳至 GitHub 且與網頁在同一目錄。</span>');
-                console.error("Error: " + textStatus, errorThrown);
+                $('#loading').html('<span style="color:red">讀取失敗。<br>請確認 data.json 是否已上傳至 GitHub。</span>');
             }
         });
 
