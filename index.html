@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12/12-12/13 台中善化‧嗜辣獨旅 (動態版)</title>
+    <title>12/12-12/13 台中善化‧嗜辣獨旅</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         :root { --primary: #d63031; --bg: #f5f6fa; }
         body { font-family: "Microsoft JhengHei", sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .container { max-width: 900px; margin: 0 auto; }
         
-        /* Header */
-        header { background: var(--primary); color: white; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 30px; }
+        header { background: var(--primary); color: white; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 1.5em; }
+        p { margin: 5px 0 0; opacity: 0.9; font-size: 0.9em; }
         
-        /* Loading State */
-        #loading { text-align: center; font-size: 1.2em; color: #666; display: none; }
-
-        /* Sections */
+        #loading { text-align: center; font-size: 1.2em; color: #666; padding: 20px; }
+        
         h2 { border-left: 5px solid var(--primary); padding-left: 10px; margin-top: 40px; color: #2d3436; }
         
-        /* Food Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
-        .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border: 1px solid #ddd; }
-        .card:hover { transform: translateY(-3px); transition: 0.3s; }
+        .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #ddd; }
         
         .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .name { font-weight: bold; font-size: 1.1em; }
         .tag { font-size: 0.8em; background: #eee; padding: 2px 6px; border-radius: 4px; color: #555; }
-        .spicy { color: var(--primary); font-size: 0.9em; margin-bottom: 8px; }
+        .spicy { color: var(--primary); font-size: 0.9em; margin-bottom: 8px; font-weight: bold; }
         .desc { font-size: 0.95em; color: #666; margin-bottom: 15px; line-height: 1.4; }
-        .btn { display: block; text-align: center; background: #f1f2f6; color: #333; text-decoration: none; padding: 8px; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background: #e1e1e1; }
+        .btn { display: block; text-align: center; background: #f1f2f6; color: #333; text-decoration: none; padding: 8px; border-radius: 5px; font-weight: bold; transition: 0.2s; }
+        .btn:hover { background: #e1e1e1; color: var(--primary); }
 
-        /* Table */
-        table { width: 100%; border-collapse: collapse; background: white; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        th { background: #2d3436; color: white; padding: 10px; }
-        td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; }
+        table { width: 100%; border-collapse: collapse; background: white; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+        th { background: #2d3436; color: white; padding: 12px; }
+        td { padding: 12px; border-bottom: 1px solid #eee; text-align: center; }
     </style>
 </head>
 <body>
@@ -43,50 +39,51 @@
 <div class="container">
     <header>
         <h1>🌶️ 台中善化．嗜辣美食攻略</h1>
-        <p>資料來源：外部 JSON (可即時編輯)</p>
+        <p>資料讀取自 GitHub 雲端設定檔</p>
     </header>
 
-    <div id="loading">正在讀取美食資料...</div>
+    <div id="loading">正在連線讀取最新美食資料...</div>
 
-    <h2 id="day1-title">載入中...</h2>
-    <div id="day1-list" class="grid"></div>
+    <div id="content" style="display:none;">
+        <h2 id="day1-title"></h2>
+        <div id="day1-list" class="grid"></div>
 
-    <h2 id="day2-title">載入中...</h2>
-    <div id="day2-list" class="grid"></div>
+        <h2 id="day2-title"></h2>
+        <div id="day2-list" class="grid"></div>
 
-    <h2>🚄 台中 -> 善化 火車時刻 (必停靠)</h2>
-    <table>
-        <thead>
-            <tr><th>車次</th><th>台中開</th><th>善化到</th><th>備註</th></tr>
-        </thead>
-        <tbody id="train-list"></tbody>
-    </table>
+        <h2>🚄 台中 -> 善化 火車時刻 (必停靠)</h2>
+        <table>
+            <thead>
+                <tr><th>車次</th><th>台中開</th><th>善化到</th><th>備註</th></tr>
+            </thead>
+            <tbody id="train-list"></tbody>
+        </table>
+    </div>
 </div>
 
 <script>
     $(document).ready(function() {
-        // 使用 Ajax 讀取 data.json
+        // 設定 GitHub Pages 讀取路徑 (相對路徑即可)
+        var dataUrl = "data.json";
+
         $.ajax({
-            url: 'data.json',
+            url: dataUrl,
             dataType: 'json',
-            cache: false, // 確保不快取，每次都讀最新
-            beforeSend: function() {
-                $('#loading').show();
-            },
+            // 重要：設為 false 會強制瀏覽器不快取 (加上 timestamp)
+            cache: false, 
             success: function(data) {
                 $('#loading').hide();
+                $('#content').fadeIn();
 
-                // 1. 設定標題
+                // 填入標題
                 $('#day1-title').text(data.schedule.day1_title);
                 $('#day2-title').text(data.schedule.day2_title);
 
-                // 2. 產生 Day 1 美食卡片
+                // 填入列表
                 renderFood(data.day1_food, '#day1-list');
-
-                // 3. 產生 Day 2 美食卡片
                 renderFood(data.day2_food, '#day2-list');
 
-                // 4. 產生火車時刻表
+                // 填入火車
                 var trainHtml = '';
                 $.each(data.trains, function(i, item) {
                     trainHtml += '<tr>';
@@ -98,16 +95,15 @@
                 });
                 $('#train-list').html(trainHtml);
             },
-            error: function() {
-                alert('讀取 data.json 失敗！請確保檔案在同一目錄下，且不是直接雙擊開啟 (需透過 Web Server 或瀏覽器設定允許本地讀取)。');
-                $('#loading').text('讀取失敗，請檢查瀏覽器 Console 訊息。');
+            error: function(jqXHR, textStatus, errorThrown) {
+                $('#loading').html('<span style="color:red">讀取失敗。<br>請確認 data.json 是否已上傳至 GitHub 且與網頁在同一目錄。</span>');
+                console.error("Error: " + textStatus, errorThrown);
             }
         });
 
-        // 封裝成 Function 方便重複使用 (類似 VB Sub)
-        function renderFood(foodArray, containerId) {
+        function renderFood(list, target) {
             var html = '';
-            $.each(foodArray, function(index, item) {
+            $.each(list, function(i, item) {
                 html += '<div class="card">';
                 html += '  <div class="card-header">';
                 html += '    <span class="name">' + item.name + '</span>';
@@ -118,7 +114,7 @@
                 html += '  <a href="' + item.map + '" target="_blank" class="btn">📍 Google Map</a>';
                 html += '</div>';
             });
-            $(containerId).html(html);
+            $(target).html(html);
         }
     });
 </script>
