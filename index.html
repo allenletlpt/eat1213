@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12/12-12/13 台中善化‧嗜辣獨旅</title>
+    <style>
+        :root {
+            --primary-color: #c92a2a; /* 辣椒紅 */
+            --secondary-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: "Microsoft JhengHei", "Heiti TC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #c92a2a 0%, #e03131 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0; font-size: 1.8rem; }
+        h2 { 
+            border-left: 5px solid var(--primary-color);
+            padding-left: 12px;
+            margin-top: 40px;
+            color: #212529;
+        }
+        .date-header {
+            background-color: #ffe3e3;
+            color: #c92a2a;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            border-left: 2px solid #ddd;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        /* 美食卡片樣式 */
+        .food-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        .food-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        .food-card.stall { border-left: 5px solid #fab005; } /* 攤販黃色 */
+        .food-card.restaurant { border-left: 5px solid #c92a2a; } /* 餐廳紅色 */
+        
+        .food-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .food-tag {
+            font-size: 0.8rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background-color: #f1f3f5;
+            color: #495057;
+        }
+        .spicy-level { color: #c92a2a; font-size: 0.9rem; }
+        .food-desc { font-size: 0.95rem; color: #555; margin-bottom: 10px; }
+        .food-tips {
+            background-color: #fff5f5;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #c92a2a;
+        }
+        
+        .map-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+        .map-btn::after { content: ' 📍'; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        th { background-color: #495057; color: white; padding: 10px; }
+        td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; }
+        .highlight-row { background-color: #fff0f0; font-weight: bold; }
+        
+        @media (min-width: 600px) {
+            .food-section { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🌶️ 台中善化．嗜辣獨旅</h1>
+    <p>12/12 (五) - 12/13 (六)</p>
+</header>
+
+<div class="container">
+
+    <div class="date-header">12/12 (週五) 一中街辣味巡禮</div>
+    
+    <div class="timeline-item"><strong>13:30</strong> 台北車站出發 (普悠瑪 165)</div>
+    <div class="timeline-item"><strong>15:10</strong> 抵達台中車站 -> 前往臺體大 (雙十路一段16號)</div>
+    <div class="timeline-item"><strong>15:30</strong> 活動開始</div>
+    <div class="timeline-item"><strong>17:00</strong> 活動結束 -> 步行至住宿點 (太平路22號)</div>
+    
+    <h2>🔥 晚餐：一中街「辣」美食地圖</h2>
+    <p>您的住宿點位於商圈核心。以下精選適合一人、不同種類的辣味美食，您可以選擇「一家吃飽」或「多家掃街」。</p>
+
+    <div class="food-section">
+        <div class="food-card stall">
+            <div class="food-title">王印製麵 <span class="food-tag">必吃老店</span></div>
+            <div class="spicy-level">辣度推薦：🔥🔥🔥🔥</div>
+            <div class="food-desc">外觀是鐵皮屋不起眼，但這裡的<strong>「麻辣乾麵」</strong>是傳奇。麵條Q彈，重點是他們桌上的獨門辣醬，香氣極重，帶有後勁。</div>
+            <div class="food-tips">💡 點法：麻辣乾麵 + 抄手。愛吃辣一定要再加桌上的辣油。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=王印製麵" target="_blank" class="map-btn">導航</a>
+        </div>
+
+        <div class="food-card stall">
+            <div class="food-title">21臭豆腐 <span class="food-tag">排隊名攤</span></div>
+            <div class="spicy-level">辣度推薦：🔥🔥🔥</div>
+            <div class="food-desc">一中街指標美食。外酥內嫩，配上爽口泡菜。精髓在於淋在上面的蒜泥與特製辣椒醬。</div>
+            <div class="food-tips">💡 建議先抽號碼牌，去買飲料再回來。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=21臭豆腐" target="_blank" class="map-btn">導航</a>
+        </div>
+
+        <div class="food-card stall">
+            <div class="food-title">品宏小不點麻辣燙 <span class="food-tag">濃郁湯頭</span></div>
+            <div class="spicy-level">辣度推薦：🔥🔥🔥</div>
+            <div class="food-desc">在地十幾年的老攤，湯頭有中藥香，溫潤不嗆喉。食材選擇多，可以點一碗滿滿的料回旅館吃。</div>
+            <div class="food-tips">💡 必點：起司球、麻辣鴨血、王子麵。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=品宏小不點麻辣燙" target="_blank" class="map-btn">導航</a>
+        </div>
+
+        <div class="food-card stall">
+            <div class="food-title">上和園滷味 <span class="food-tag">冷滷下酒</span></div>
+            <div class="spicy-level">辣度推薦：🔥🔥</div>
+            <div class="food-desc">老字號冷滷味（東海雞爪凍的一中分店）。適合買回房間配電視。</div>
+            <div class="food-tips">💡 推薦：雞爪凍、毛豆，敢吃辣記得拿辣粉包。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=上和園滷味" target="_blank" class="map-btn">導航</a>
+        </div>
+
+        <div class="food-card restaurant">
+            <div class="food-title">大師兄銷魂麵舖 <span class="food-tag">精緻套餐</span></div>
+            <div class="spicy-level">辣度推薦：🔥🔥🔥</div>
+            <div class="food-desc">想坐下來好好吃一頓的首選。乾拌麵的辣油非常香，鴨血豆腐湯很有水準。</div>
+            <div class="food-tips">💡 位置：中友百貨C棟B2。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=大師兄銷魂麵舖+台中中友店" target="_blank" class="map-btn">導航</a>
+        </div>
+    </div>
+
+    <div class="date-header" style="margin-top:40px;">12/13 (週六) 善化辣味探索</div>
+    
+    <div class="timeline-item"><strong>08:00</strong> 工作活動開始</div>
+    <div class="timeline-item"><strong>15:30</strong> 工作活動結束</div>
+
+    <p style="margin-top:20px;">依照您的偏好，以下安排了<strong>「善化晚餐」</strong>與<strong>「台中外帶」</strong>兩種方案。請注意，<strong>週六善化夜市未營業</strong>，推薦您前往善化市區的特色店家。</p>
+
+    <h2>🔥 選項 A：回善化吃晚餐 (推薦)</h2>
+    <div class="food-section">
+        <div class="food-card restaurant" style="border-left-color: #e03131;">
+            <div class="food-title">嗜麻殿麻辣炒乾鍋 (善化店)</div>
+            <div class="spicy-level">辣度：🔥🔥🔥🔥</div>
+            <div class="food-desc">非常適合重口味！這家專賣「麻辣乾鍋」，您可以自選肉品（推薦松阪豬或牛五花），搭配店家獨門秘製的麻辣粉與乾辣椒爆炒，又麻又香。</div>
+            <div class="food-tips">💡 位於善化高中對面，有單人套餐，不用擔心一個人很難點。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=嗜麻殿麻辣炒乾鍋+善化" target="_blank" class="map-btn">導航</a>
+        </div>
+
+        <div class="food-card restaurant" style="border-left-color: #fab005;">
+            <div class="food-title">阿春土產牛肉</div>
+            <div class="spicy-level">辣度：🔥🔥 (自調醬料)</div>
+            <div class="food-desc">既然到善化，牛肉湯是經典。雖然湯本身不辣，但台南吃法一定要沾<strong>「甜醬油膏 + 大量豆瓣醬/生辣椒 + 薑絲」</strong>。</div>
+            <div class="food-tips">💡 位於善化市場旁，是當地人氣老店。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=阿春土產牛肉" target="_blank" class="map-btn">導航</a>
+        </div>
+    </div>
+
+    <h2>🍜 選項 B：台中車站外帶/快吃 (再上火車)</h2>
+    <div class="food-section">
+        <div class="food-card stall">
+            <div class="food-title">越南法國麵包工藝</div>
+            <div class="spicy-level">辣度：🔥🔥🔥🔥</div>
+            <div class="food-desc"><strong>大推！</strong> 位於台灣大道/自由路口（近期搬家至天天饅頭隔壁）。麵包極度酥脆，重點是<strong>「加辣」</strong>是直接放入生辣椒，非常過癮！適合買上火車吃。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=越南法國麵包工藝" target="_blank" class="map-btn">導航</a>
+        </div>
+         <div class="food-card restaurant">
+            <div class="food-title">有春茶館 (大智店)</div>
+            <div class="spicy-level">辣度：🔥🔥🔥</div>
+            <div class="food-desc">就在火車站後站，環境舒適。推薦<strong>「麻辣乾拌麵」</strong>或<strong>「麻辣牛肉麵」</strong>，口味傳統且道地。</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=有春茶館+大智店" target="_blank" class="map-btn">導航</a>
+        </div>
+    </div>
+
+    <h2 style="margin-top: 30px;">🚄 台中 -> 善化 火車時刻 (12/13 週六)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>車次</th>
+                <th>台中開</th>
+                <th>善化到</th>
+                <th>建議</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>自強 175</td>
+                <td>16:00</td>
+                <td>--</td>
+                <td style="color:red">不停善化</td>
+            </tr>
+            <tr>
+                <td>區間快 3029</td>
+                <td>16:09</td>
+                <td>17:49</td>
+                <td>慢車</td>
+            </tr>
+            <tr class="highlight-row">
+                <td>自強 123</td>
+                <td>16:40</td>
+                <td>17:51</td>
+                <td>首選 (接善化晚餐)</td>
+            </tr>
+             <tr>
+                <td>自強 125</td>
+                <td>17:33</td>
+                <td>18:41</td>
+                <td>次選</td>
+            </tr>
+             <tr class="highlight-row">
+                <td>自強 129</td>
+                <td>17:55</td>
+                <td>19:15</td>
+                <td>適合在台中吃完再走</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
